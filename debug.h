@@ -11,5 +11,5 @@
 #if defined(DEBUG) && defined(CHUANHENG)
     #define CH_DEBUG(x)   DEBUG_LOG(PFX x)
 #else
-    #define DEBUG_LOG(x) 
+    #define CH_DEBUG(x) 
 #endif

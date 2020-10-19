@@ -21,9 +21,16 @@ MODULE_AUTHOR("Chuanheng Feng");
 MODULE_DESCRIPTION("Example Module");
 MODULE_LICENSE("Dual BSD/GPL");
 
+// wait_queue_head_t my_queue;
+// init_waitqueue_head(&my_queue);
+DECLARE_WAIT_QUEUE_HEAD(my_queue);
+
+// void* tsk;
+// DECLARE_WAITQUEUE(q1,tsk);
 
 static int __init krping_init(void)
 {
+	// add_wait_queue();
 	DEBUG_LOG("example_mod_start\n");
 	return 0;
 }
