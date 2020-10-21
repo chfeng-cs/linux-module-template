@@ -31,10 +31,10 @@ DECLARE_WAIT_QUEUE_HEAD(my_queue);
 static int __init krping_init(void)
 {
 	// add_wait_queue();
+	printk(KERN_ERR PFX "Invalid Parameter");
 	DEBUG_LOG("example_mod_start\n");
 	return 0;
 }
-
 
 
 static void __exit krping_exit(void)

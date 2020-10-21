@@ -5,20 +5,25 @@ obj-m += ${module_name}.o
 ${module_name}-y			:=  example.o
 
 
-default:
-	make -C $(KSRC) M=`pwd` modules
+compile:
+	make -C $(KSRC) M=`pwd` modules -s
 
-install:
+install: remove
 	@# make -C $(KSRC) M=`pwd` modules_install
 	@# depmod -a
 	@sudo dmesg -C
-	sudo insmod ${module_name}.ko
-	@dmesg
+	@sudo insmod ${module_name}.ko
+	@dmesg -e
 
 clean:
 	make -C $(KSRC) M=`pwd` clean
 
 remove:
-	@sudo dmesg -C
-	sudo rmmod ${module_name}
-	@dmesg
+	@ if [ `lsmod | grep $(module_name) | wc -l` != 0 ]; then\
+		sudo dmesg -C;\
+		sudo rmmod ${module_name};\
+		dmesg -e;\
+		echo -----Remove installed ${module_name}.----- ;\
+	fi
+
+all: compile install
