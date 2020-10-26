@@ -13,3 +13,6 @@
 #else
     #define CH_DEBUG(...) 
 #endif
+
+#define print_value(val, format) DEBUG_LOG(#val": "#format, val)
+#define PRINT_MACRO(macro) DEBUG_LOG(#macro": %d", macro)
