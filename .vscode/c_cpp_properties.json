@@ -22,6 +22,11 @@
                 "_GNU_SOURCE",
                 "MODULE"
             ],
+            "compilerArgs": [
+                "-nostdinc",
+                "-include", "/lib/modules/${kernelVersion}/build/include/linux/kconfig.h",
+                "-include", "/lib/modules/${kernelVersion}/build/include/linux/compiler_types.h"
+            ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu11",
             "cppStandard": "gnu++14",
