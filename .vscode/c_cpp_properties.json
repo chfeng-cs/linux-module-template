@@ -9,14 +9,14 @@
             "name": "driver-ubuntu-20",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/lib/modules/5.4.0-80-generic/build/arch/x86/include",
-                "/lib/modules/5.4.0-80-generic/build/arch/x86/include/generated",
-                "/lib/modules/5.4.0-80-generic/build/include",
-                "/lib/modules/5.4.0-80-generic/build/arch/x86/include/uapi",
-                "/lib/modules/5.4.0-80-generic/build/arch/x86/include/generated/uapi",
-                "/lib/modules/5.4.0-80-generic/build/include/uapi",
-                "/lib/modules/5.4.0-80-generic/build/include/generated/uapi",
-                "/lib/modules/5.4.0-80-generic/build/ubuntu/include",
+                "/lib/modules/5.4.0-90-generic/build/arch/x86/include",
+                "/lib/modules/5.4.0-90-generic/build/arch/x86/include/generated",
+                "/lib/modules/5.4.0-90-generic/build/include",
+                "/lib/modules/5.4.0-90-generic/build/arch/x86/include/uapi",
+                "/lib/modules/5.4.0-90-generic/build/arch/x86/include/generated/uapi",
+                "/lib/modules/5.4.0-90-generic/build/include/uapi",
+                "/lib/modules/5.4.0-90-generic/build/include/generated/uapi",
+                "/lib/modules/5.4.0-90-generic/build/ubuntu/include",
                 "/usr/lib/gcc/x86_64-linux-gnu/9/include"
             ],
             "defines": [
@@ -36,8 +36,8 @@
             ],
             "compilerArgs": [
                 "-nostdinc",
-                "-include", "/lib/modules/5.4.0-80-generic/build/include/linux/kconfig.h",
-                "-include", "/lib/modules/5.4.0-80-generic/build/include/linux/compiler_types.h"
+                "-include", "/lib/modules/5.4.0-90-generic/build/include/linux/kconfig.h",
+                "-include", "/lib/modules/5.4.0-90-generic/build/include/linux/compiler_types.h"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu11",
